@@ -3,7 +3,7 @@ name: Terraform Validation
 on:
   push:
     branches:
-      - master  # O cambia a "main" si esa es tu rama principal
+      - master  # Cambia a "main" si es necesario
 
 jobs:
   validate:
@@ -17,6 +17,9 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.4.6
+
+      - name: Initialize Terraform
+        run: terraform init
 
       - name: Validate Terraform code
         run: terraform validate
