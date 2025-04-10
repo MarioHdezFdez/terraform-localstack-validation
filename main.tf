@@ -12,5 +12,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "updated-validation-bucket" # Nombre actualizado del bucket
+  bucket = "updated-bucket-name" # Prueba para activar el workflow
 }
